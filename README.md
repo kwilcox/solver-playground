@@ -18,9 +18,9 @@ Using an installed `mamba` as the solver takes... awhile.
 docker build -t solve-with-mamba -f Dockerfile.mamba .
 ```
 
-`Dockerfile.micro_and_mamba` - **~12 minutes**
+`Dockerfile.micro_and_mamba` - **fails to solve**
 
-Installs `mamba` and passes it to `conda-lock` as the solver.
+Uses `micromamba`, installs `mamba`, and passes the path to `conda-lock` as the solver.
 
 ```shell
 docker build -t solve-with-micro-and-mamba -f Dockerfile.micro_and_mamba .
