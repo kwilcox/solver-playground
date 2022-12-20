@@ -1,0 +1,18 @@
+FROM mambaorg/micromamba:1.1.0-bullseye-slim
+LABEL MAINTAINER="Kyle Wilcox <kyle@axds.co>"
+
+RUN micromamba create -c conda-forge -n tools --yes conda-lock && \
+    micromamba clean --all --yes
+
+ENV GIT_PYTHON_REFRESH quiet
+
+COPY --chown=mambauser:mambauser reqs.yml /tmp/reqs.yml
+RUN /opt/conda/envs/tools/bin/conda-lock \
+        --conda=micromamba \
+        --micromamba \
+        -p linux-64 \
+        -f /tmp/reqs.yml \
+        --lockfile /tmp/conda-lock.yml
+
+RUN micromamba create -c conda-forge -n locked --yes --file /tmp/conda-lock.yml && \
+    micromamba clean --all --yes

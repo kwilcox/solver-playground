@@ -1,0 +1,82 @@
+name: packrat38
+channels:
+  - conda-forge
+  - axiom-data-science
+  - defaults
+dependencies:
+  - conda-forge::python =3.8.15
+  - conda-forge::luigi =3.0.2
+
+  - axiom-data-science::axds-trampoline =0.2.2b1
+  - axiom-data-science::easyavro =2.6.0
+  - axiom-data-science::trampoline-pipelines =0.0.3
+  - axiom-data-science::trampoline-raster =0.0.4
+
+  - conda-forge::boto3 =1.26.0
+  - conda-forge::bs4 =4.9.3
+  - conda-forge::bufrtools =1.1.3
+  - conda-forge::cfunits =3.3.1
+  - conda-forge::cftime =1.3.0
+  - conda-forge::ciso =0.1.0
+  - conda-forge::codar2netcdf =1.0.0
+  - conda-forge::compliance-checker =4.3.4
+  - conda-forge::conda-lock =1.0.1
+  - conda-forge::dask =2021.3.1
+  - conda-forge::dbfread =2.0.7
+  - conda-forge::docker-py =5.0.3
+  - conda-forge::epic2cf =0.0.5
+  - conda-forge::erddapy =0.9.0
+  - conda-forge::ffmpeg =4.3.1
+  - conda-forge::fiona =1.8.18
+  - conda-forge::gdal =3.1.4
+  - conda-forge::geoalchemy2 =0.6.3
+  - conda-forge::geojson =2.5.0
+  - conda-forge::geopandas =0.8.1
+  - conda-forge::geos =3.8.1
+  - conda-forge::google-cloud-core =1.5.0
+  - conda-forge::google-cloud-storage =1.35.0
+  - conda-forge::gsw =3.4.0
+  - conda-forge::ioos_qc =2.0.0
+  - conda-forge::isodate =0.6.1
+  - conda-forge::jsonpickle =0.9.6
+  - conda-forge::jsonschema =3.2.0
+  - conda-forge::libgdal =3.1.4
+  - conda-forge::minio =7.0.1
+  - conda-forge::mysqlclient =1.4.6
+  - conda-forge::nco =4.9.9
+  - conda-forge::netCDF4 =1.5.5.1
+  - conda-forge::numba =0.50.1
+  - conda-forge::numpy =1.19.5
+  - conda-forge::openssh =9.0p1
+  - conda-forge::owslib =0.21.0
+  - conda-forge::pandas =0.25.3
+  - conda-forge::paramiko =2.12.0
+  - conda-forge::pocean-core =2.0.0
+  - conda-forge::podaac-data-subscriber =1.8.0
+  - conda-forge::psycopg2 =2.8.6
+  - conda-forge::pyarrow =3.0.0
+  - conda-forge::pydantic =1.8.2
+  - conda-forge::pygc =1.2.1
+  - conda-forge::pygeoif =0.7
+  - conda-forge::pynco =1.0.0
+  - conda-forge::python-confluent-kafka =1.5.0
+  - conda-forge::python-dateutil =2.8.1
+  - conda-forge::pyworms =0.2.0
+  - conda-forge::redis-py =3.5.3
+  - conda-forge::requests =2.25.1
+  - conda-forge::requests-oauthlib =1.3.1
+  - conda-forge::rtree =0.9.7
+  - conda-forge::scikit-learn =0.24.0
+  - conda-forge::scp =0.13.3
+  - conda-forge::scipy =1.5.3
+  - conda-forge::shapely =1.7.1
+  - conda-forge::sqlalchemy =1.3.22
+  - conda-forge::sshpass =1.06
+  - conda-forge::suds-jurko =0.6
+  - conda-forge::thredds_crawler =1.5.4
+  - conda-forge::wera2netcdf =1.0.0
+  - conda-forge::xarray =0.16.2
+  - conda-forge::xgcm =0.6.0
+  - conda-forge::xlrd =1.2.0
+  - conda-forge::xmltodict =0.13.0
+  - conda-forge::zeep =4.1.0
