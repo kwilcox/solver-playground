@@ -3,6 +3,7 @@ LABEL MAINTAINER="Kyle Wilcox <kyle@axds.co>"
 
 RUN micromamba create -c conda-forge -n tools --yes \
         conda-lock \
+        mamba \
         && \
     micromamba clean --all --yes
 
@@ -10,8 +11,8 @@ ENV GIT_PYTHON_REFRESH quiet
 
 COPY --chown=mambauser:mambauser reqs.yml /tmp/reqs.yml
 RUN /opt/conda/envs/tools/bin/conda-lock \
-        --conda=micromamba \
-        --micromamba \
+        --conda=/opt/conda/envs/tools/bin/mamba \
+        --mamba \
         -p linux-64 \
         -f /tmp/reqs.yml \
         --lockfile /tmp/conda-lock.yml

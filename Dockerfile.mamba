@@ -6,11 +6,16 @@ RUN mamba create -n tools --yes conda-lock && \
 
 COPY reqs.yml /tmp/reqs.yml
 RUN /opt/conda/envs/tools/bin/conda-lock \
+        lock \
         --conda=mamba \
         --mamba \
         -p linux-64 \
         -f /tmp/reqs.yml \
         --lockfile /tmp/conda-lock.yml
 
-RUN mamba create -n locked --yes --file /tmp/conda-lock.yml && \
-    mamba clean --all --yes
+RUN /opt/conda/envs/tools/bin/conda-lock \
+        install \
+        --conda=mamba \
+        --mamba \
+        -n locked \
+        /tmp/conda-lock.yml

@@ -4,14 +4,24 @@ Troubleshooting how/why `micromamba` solves so much faster than `mamba` on my co
 
 For me...
 
-**~2.5 minutes**
+`Dockerfile.micromamba` - **~2.5 minutes**
 
 ```shell
-docker build -t solve-with-micro -f Dockerfile.micromamba
+docker build -t solve-with-micro -f Dockerfile.micromamba .
 ```
 
-**~12 minutes**
+`Dockerfile.mamba` - **~12 minutes**
+
+Using an installed `mamba` as the solver takes... awhile.
 
 ```shell
-docker build -t solve-with-mamba -f Dockerfile.mamba
+docker build -t solve-with-mamba -f Dockerfile.mamba .
+```
+
+`Dockerfile.micro_and_mamba` - **~12 minutes**
+
+Installs `mamba` and passes it to `conda-lock` as the solver.
+
+```shell
+docker build -t solve-with-micro-and-mamba -f Dockerfile.micro_and_mamba .
 ```
